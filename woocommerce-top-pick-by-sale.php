@@ -10,7 +10,6 @@
  * WC requires at least: 3.0
  * WC tested up to: 7.7.0
  * Author URI: https://www.crescentek.com/
- * License: GPLv2 or later
  * Text Domain: wc-top-pick-by-sale
  * Domain Path: /languages/
  */
