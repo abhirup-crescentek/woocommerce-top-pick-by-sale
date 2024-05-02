@@ -69,11 +69,6 @@ const FormFields = (props) => {
           ...prevState,
           [key]: e,
         }));
-      } else if (from_type === "mailchimp_select") {
-        setState((prevState) => ({
-          ...prevState,
-          [key]: array_values[e.index],
-        }));
       } else if (from_type === "multi-select") {
         setState((prevState) => ({
           ...prevState,
@@ -91,11 +86,7 @@ const FormFields = (props) => {
         }));
       }
     } else {
-      // Array of values (e.g., checkbox): TODO: Optimization needed.
-      const found = state[key]
-        ? state[key].find((d) => d === e.target.value)
-        : false;
-
+      const found = state[key] ? state[key].find((d) => d === e.target.value) : false;
       if (found) {
         const data = state[key].filter((d) => {
           return d !== found;

@@ -37,8 +37,6 @@ No, it require Woocommerce plugin to use.
 
 
 
-
-
 == Changelog ==
 
 Version 1.0

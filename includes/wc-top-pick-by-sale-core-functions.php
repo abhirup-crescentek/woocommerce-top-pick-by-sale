@@ -53,7 +53,7 @@ if ( ! function_exists( 'wc_top_pick_by_sale_cron_function' ) ) {
             $MonthsAgo = $currentDate->modify('-'.$selected_month.' months');
             $formattedDate = $MonthsAgo->format('Y-m-d');
 
-            if ( get_wctpbs_plugin_settings( 'unassign_previous_products' ) ) {
+            if ( get_wctpbs_plugin_settings( 'unassign_prev_products' ) ) {
                 $dufault_limit = get_wctpbs_plugin_settings( 'max_top_picks_products' ) ? get_wctpbs_plugin_settings( 'max_top_picks_products' ) : '';
                 wc_top_pick_by_sale_unassign_old_product_cat( $category_id );
             }

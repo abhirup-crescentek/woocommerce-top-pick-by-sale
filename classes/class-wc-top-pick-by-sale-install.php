@@ -27,7 +27,7 @@ class WC_Top_Pick_By_Sale_Install {
 
     public function start_top_pick_by_sale_default_settings() {
         $stock_notifier_settings = array(
-            'unassign_previous_products' => 'unassign_previous_products',
+            'unassign_prev_products' => array('unassign_prev_products'),
             'get_items_from_last_date' => array( 
                 'value' => 6,
                 'label' => 'Last Six Month',

@@ -57,7 +57,6 @@ class WC_Top_Pick_By_Sale {
         }
     }
 
-
     /**
      * Load Localisation files.
      */
