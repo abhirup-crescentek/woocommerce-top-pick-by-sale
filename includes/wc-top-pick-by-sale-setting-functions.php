@@ -51,7 +51,7 @@ if ( ! function_exists( 'wc_top_pick_by_sale_admin_tabs' ) ) {
             );
         } 
 
-        $wctp_settings_page_endpoint = apply_filters( 'wc_stock_notifier_endpoint_fields_before_value', array(
+        $wctp_settings_page_endpoint = apply_filters( 'wc_top_pick_by_sale_endpoint_fields_before_value', array(
             'general' => array(
                 'tablabel'        => __( 'General', 'wc-top-pick-by-sale' ),
                 'apiurl'          => 'save_admin_settings',
@@ -78,15 +78,15 @@ if ( ! function_exists( 'wc_top_pick_by_sale_admin_tabs' ) ) {
                         'database_value' => '',
                     ],
                 	[
-                        'key'       => 'unassign_previous_products',
+                        'key'       => 'unassign_prev_products',
                         'label'     => __("Unassign Previous Top Pick Products", 'wc-top-pick-by-sale'),
                         'class'     => 'wctp-toggle-checkbox',
                         'type'      => 'checkbox',
                         'options'   => array(
                             array(
-                                'key'   => "unassign_previous_products",
+                                'key'   => "unassign_prev_products",
                                 'label' => __( 'Unassign Previous Top Pick Products From Selected Catagory', 'wc-top-pick-by-sale' ),
-                                'value' => "unassign_previous_products"
+                                'value' => "unassign_prev_products"
                             ),
                         ),
                         'database_value' => array(),
@@ -95,7 +95,7 @@ if ( ! function_exists( 'wc_top_pick_by_sale_admin_tabs' ) ) {
                         'key'               => 'max_top_picks_products',
                         'type'              => 'number',
                         'class'             => 'wctp-setting-wpeditor-class',
-                        'depend_checkbox'   => 'unassign_previous_products',
+                        'depend_checkbox'   => 'unassign_prev_products',
                         'label'             => __( 'Max Assign Products', 'wc-top-pick-by-sale' ),
                         'desc'              => __( 'Maximum Products to be Assign in Selected Category.(Default: Not Set)', 'wc-top-pick-by-sale' ),
                         'database_value'    => '',
@@ -199,7 +199,7 @@ if ( ! function_exists( 'wc_top_pick_by_sale_admin_tabs' ) ) {
             }
         }
 
-        $wc_top_pick_backend_tab_list = apply_filters( 'wc_stock_notifier_admin_tab_list', array(
+        $wc_top_pick_backend_tab_list = apply_filters( 'wc_top_pick_by_sale_admin_tab_list', array(
             'top-picks-settings' => $wctp_settings_page_endpoint,
         ) );
         
